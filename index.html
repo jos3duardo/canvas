@@ -3,8 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <title>Canvas</title>
+    <style>
+        canvas{
+            border: 1px solid #cccccc
+        }
+    </style>
 </head>
 <body>
+<canvas id="canvas" class="canvas"></canvas>
 
+
+<script>
+    const canvas = document.getElementById('canvas');
+    if (canvas.getContext){
+        console.log('Suported')
+        let ctx = canvas.getContext('2d');
+
+        ctx.moveTo(0,0);
+        ctx.arc(80,30,30,0,2 * Math.PI);
+        ctx.stroke()
+
+    }else{
+        console.warn('Not suported')
+    }
+</script>
 </body>
 </html>
