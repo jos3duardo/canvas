@@ -19,9 +19,36 @@
         console.log('Suported')
         let ctx = canvas.getContext('2d');
 
-        ctx.moveTo(0,0);
-        ctx.arc(80,30,30,0,2 * Math.PI);
-        ctx.stroke()
+        // ctx.moveTo(0,0);
+        //linha
+        // ctx.lineTo(300,100);
+
+        //circulo
+        // ctx.arc(80,30,30,0,2 * Math.PI);
+
+        //função stroke não preenche o interior do objeto
+        // ctx.stroke()
+
+        //quadrado
+        // ctx.rect(0,0,150,150);
+        // ctx.fill();
+
+        //triangulo
+        ctx.moveTo(80,0);
+        ctx.lineTo(75,0);
+        ctx.lineTo(150,100);
+        ctx.lineTo(0,100);
+        //espessura da borda
+        ctx.lineWidth = 2;
+
+        //cor da borda
+        ctx.strokeStyle = "#292929";
+
+        //cor do preenchimento
+        ctx.fillStyle = "#01c1d2";
+        //função fill deixa o interior preenchido
+        ctx.fill();
+        ctx.stroke();
 
     }else{
         console.warn('Not suported')
