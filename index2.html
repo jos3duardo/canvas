@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas</title>
+    <style>
+        canvas{
+            border: 1px solid #cccccc
+        }
+    </style>
+</head>
+<body>
+<canvas id="canvas" class="canvas"></canvas>
+
+
+<script>
+    const canvas = document.getElementById('canvas');
+    if (canvas.getContext){
+        console.log('Suported')
+        let ctx = canvas.getContext('2d');
+        ctx.font = '60px sans-serif';
+        ctx.textAlign = 'center';
+        ctx.fillStyle = "#44bcb6";
+        ctx.fillText('Canvas SON',20,70)
+
+    }else{
+        //caso o navegador não suporte o canvas
+        console.warn('Not suported')
+    }
+</script>
+</body>
+</html>
