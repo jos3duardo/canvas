@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas</title>
+    <style>
+        canvas{
+            border: 1px solid #cccccc
+        }
+    </style>
+</head>
+<body>
+<canvas id="canvas" class="canvas"></canvas>
+
+
+<script>
+    const canvas = document.getElementById('canvas');
+    if (canvas.getContext){
+        console.log('Suported')
+        let ctx = canvas.getContext('2d');
+        let x = 0;
+        let y = 0;
+        requestAnimationFrame(loop);
+        function loop() {
+            ctx.clearRect(0,0, canvas.width, canvas.height);
+            ctx.fillRect(x,y,30,30);
+            if (x >= 0){
+                x += 1;
+            }
+            if (x >= 100){
+                x=0;
+            }
+            requestAnimationFrame(loop);
+        }
+
+    }else{
+        //caso o navegador não suporte o canvas
+        console.warn('Not suported')
+    }
+</script>
+</body>
+</html>
