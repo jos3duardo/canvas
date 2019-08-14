@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Blackboard</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+    <div class="row">
+        <canvas id="canvas" width="800" height="500"></canvas>
+    </div>
+    <div class="row">
+        <button type="button" class="btn btn-dark" id="btn_clear">Limpar</button>
+        <select name="select" class="btn btn-dark" id="color">
+            <option value="black">Preto</option>
+            <option value="red">Vermelho</option>
+            <option value="blue">Azul</option>
+            <option value="yellow">Amarelo</option>
+            <option value="green">Verde</option>
+            <option value="pink">Rosa</option>
+        </select>
+    </div>
+
+
+<script src="js/jquery.js"></script>
+<script>
+    $(document).ready(function () {
+        const canvas = $('#canvas');
+        const btnClear = $('#btn_clear');
+        let ctx = canvas[0].getContext('2d');
+        let lastX = 0;
+        let lastY = 0;
+        let pressed = false;
+
+        canvas.mousedown(function (e) {
+            const left = $(this).offset().left;
+            const top = $(this).offset().top;
+            pressed = true;
+            initDraw(e.pageX - left,e.pageY - top, false);
+        });
+        canvas.mousemove(function (e) {
+            if (pressed) {
+                const left = $(this).offset().left;
+                const top = $(this).offset().top;
+                initDraw(e.pageX - left,e.pageY - top, true);
+            }
+        });
+        canvas.on('mouseup',function (e) {
+            pressed = false;
+        });
+
+        btnClear.on('click', function (e) {
+            clear();
+        });
+
+        function initDraw(x,y,move) {
+            if (move){
+                ctx.beginPath();
+                ctx.strokeStyle = $('#color').val() || 'black';
+                ctx.lineWidth = 5;
+                ctx.moveTo(lastX, lastY);
+                ctx.lineTo(x,y);
+                ctx.closePath();
+                ctx.stroke();
+            }
+            lastX = x;
+            lastY = y;
+        }
+        function clear() {
+            ctx.clearRect(0,0, ctx.canvas.width, ctx.canvas.height);
+        }
+    })
+</script>
+</body>
+</html>
