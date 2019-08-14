@@ -10,11 +10,12 @@
     </style>
 </head>
 <body>
-<canvas id="canvas" class="canvas"></canvas>
+<canvas tabindex="1" id="canvas" class="canvas"></canvas>
 
 
 <script>
     const canvas = document.getElementById('canvas');
+    canvas.focus();
     if (canvas.getContext){
         console.log('Suported');
         let ctx = canvas.getContext('2d');
@@ -24,14 +25,29 @@
         function loop() {
             ctx.clearRect(0,0, canvas.width, canvas.height);
             ctx.fillRect(x,y,30,30);
-            if (x >= 0){
-                x += 1;
-            }
-            if (x >= 100){
-                x=0;
-            }
+            // if (x >= 0){
+            //     x += 1;
+            // }
+            // if (x >= 100){
+            //     x=0;
+            // }
             requestAnimationFrame(loop);
         }
+
+        canvas.addEventListener('keydown', function (e) {
+           if (e.keyCode === 83){//s
+               y += 2;
+           }
+            if (e.keyCode === 68){//d
+                x += 2;
+            }
+            if (e.keyCode === 65){//a
+                x -= 2;
+            }
+            if (e.keyCode === 87){//w
+                y -= 2;
+            }
+        }, true);
     }else{
         //caso o navegador não suporte o canvas
         console.warn('Not suported');

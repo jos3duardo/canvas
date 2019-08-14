@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99debcfc-9f39-46ca-9a0c-d72f6de2c5eb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/animacao.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/events.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/animacao.html" beforeDir="false" afterPath="$PROJECT_DIR$/animacao.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,11 +46,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/animacao.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="20" column="18" lean-forward="true" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+            <state relative-caret-position="319">
+              <caret line="34" selection-start-line="34" selection-end-line="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/events.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="47" column="22" selection-start-line="47" selection-start-column="22" selection-end-line="47" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -73,12 +83,12 @@
         <option value="$PROJECT_DIR$/index2.html" />
         <option value="$PROJECT_DIR$/image.html" />
         <option value="$PROJECT_DIR$/animacao.html" />
+        <option value="$PROJECT_DIR$/events.html" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="964" />
-    <option name="y" value="21" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="855" />
     <option name="width" value="683" />
     <option name="height" value="732" />
   </component>
@@ -139,7 +149,7 @@
       <option name="presentableId" value="Default" />
       <updated>1565409269162</updated>
       <workItem from="1565409270304" duration="3944000" />
-      <workItem from="1565736611030" duration="1712000" />
+      <workItem from="1565736611030" duration="3532000" />
     </task>
     <task id="LOCAL-00001" summary="desenhando uma reta e uma circunferencia">
       <created>1565410513972</created>
@@ -169,17 +179,24 @@
       <option name="project" value="LOCAL" />
       <updated>1565413149206</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="trabalhando com animações">
+      <created>1565739181519</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1565739181519</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5656000" />
+    <option name="totallyTimeSpent" value="7476000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="-1" width="1368" height="734" extended-state="6" />
+    <frame x="855" y="0" width="683" height="732" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19637462" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.40688577" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -209,7 +226,8 @@
     <MESSAGE value="desenhando um quadrado, um triangulo e um retangulo e colorindo eles" />
     <MESSAGE value="criando textos no canvas" />
     <MESSAGE value="carregando uma imagem no canvas" />
-    <option name="LAST_COMMIT_MESSAGE" value="carregando uma imagem no canvas" />
+    <MESSAGE value="trabalhando com animações" />
+    <option name="LAST_COMMIT_MESSAGE" value="trabalhando com animações" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.gitignore">
@@ -242,8 +260,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/animacao.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="20" column="18" lean-forward="true" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+        <state relative-caret-position="319">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/events.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="47" column="22" selection-start-line="47" selection-start-column="22" selection-end-line="47" selection-end-column="22" />
         </state>
       </provider>
     </entry>
